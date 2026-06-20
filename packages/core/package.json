@@ -1,0 +1,20 @@
+{
+	"name": "@sizela/core",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsdown",
+		"lint": "biome check --write .",
+		"check-types": "tsc -p tsconfig.json --noEmit",
+		"clean": "rimraf dist .turbo && rm -rf node_modules"
+	},
+	"keywords": [],
+	"author": "Jack WebDev",
+	"license": "ISC",
+	"packageManager": "pnpm@10.32.1",
+	"devDependencies": {
+		"rimraf": "catalog:",
+		"tsdown": "catalog:"
+	}
+}
