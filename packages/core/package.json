@@ -18,6 +18,7 @@
 	],
 	"scripts": {
 		"build": "tsdown src/index.ts --out-dir dist --dts --clean",
+		"test": "pnpm --dir ../.. exec vitest run --project core",
 		"lint": "biome check --write .",
 		"check-types": "tsc -p tsconfig.json --noEmit",
 		"clean": "rimraf dist .turbo"

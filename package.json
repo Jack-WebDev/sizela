@@ -9,6 +9,8 @@
 	"scripts": {
 		"dev": "turbo dev",
 		"build": "turbo build",
+		"test": "vitest run",
+		"test:watch": "vitest",
 		"lint": "biome check --write .",
 		"check-types": "turbo check-types",
 		"prepare": "husky"
@@ -20,7 +22,8 @@
 		"husky": "^9.1.7",
 		"lint-staged": "^17.0.7",
 		"turbo": "^2.9.16",
-		"typescript": "^6"
+		"typescript": "^6",
+		"vitest": "catalog:"
 	},
 	"lint-staged": {
 		"*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
