@@ -13,6 +13,7 @@
 		"jsr:publish": "node ./scripts/sync-jsr-versions.mjs publish",
 		"release:list-jsr": "node ./scripts/sync-jsr-versions.mjs list",
 		"release:sync-jsr": "node ./scripts/sync-jsr-versions.mjs sync",
+		"release:version": "pnpm changeset version && pnpm run release:sync-jsr",
 		"release:publish": "pnpm changeset publish",
 		"test": "pnpm run test:unit && pnpm run test:release-scripts",
 		"test:unit": "vitest run",

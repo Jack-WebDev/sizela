@@ -52,7 +52,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          version: pnpm changeset version && pnpm run release:sync-jsr
+          version: pnpm run release:version
           publish: pnpm run release:publish
           commit: "chore: release packages"
           title: "chore: release packages"
