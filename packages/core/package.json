@@ -1,6 +1,6 @@
 {
 	"name": "@sizela/core",
-	"version": "0.1.0",
+	"version": "0.0.1",
 	"description": "Utility library with zero runtime dependencies.",
 	"type": "module",
 	"main": "./dist/index.mjs",
