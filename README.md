@@ -39,5 +39,25 @@ sizela/
 
 - `pnpm run dev`: Start all applications in development mode
 - `pnpm run build`: Build all applications
+- `pnpm run build:core`: Build the publishable `@sizela/core` package
 - `pnpm run check-types`: Check TypeScript types across all apps
 - `pnpm run check`: Run Biome formatting and linting
+- `pnpm run publish:core`: Publish `@sizela/core` from the workspace root
+- `pnpm run publish:jsr`: Publish `@sizela/core` to JSR using `jsr.json`
+
+## Publishing
+
+The repository root is a private monorepo package and cannot be published.
+
+To publish the library package instead, run:
+
+```bash
+pnpm run build:core
+pnpm run publish:core
+```
+
+To publish the same API to JSR, run:
+
+```bash
+pnpm run publish:jsr
+```

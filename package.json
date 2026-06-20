@@ -9,6 +9,9 @@
 	"scripts": {
 		"dev": "turbo dev",
 		"build": "turbo build",
+		"build:core": "pnpm --filter @sizela/core build",
+		"jsr:publish": "npx jsr publish",
+		"publish:core": "npm publish --workspace @sizela/core --access public",
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"lint": "biome check --write .",
