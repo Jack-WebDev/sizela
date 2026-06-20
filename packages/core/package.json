@@ -1,13 +1,26 @@
 {
 	"name": "@sizela/core",
 	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"description": "Utility library with zero runtime dependencies.",
+	"type": "module",
+	"main": "./dist/index.mjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.mts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.mts",
+			"import": "./dist/index.mjs",
+			"default": "./dist/index.mjs"
+		}
+	},
+	"files": [
+		"dist"
+	],
 	"scripts": {
-		"build": "tsdown",
+		"build": "tsdown src/index.ts --out-dir dist --dts --clean",
 		"lint": "biome check --write .",
 		"check-types": "tsc -p tsconfig.json --noEmit",
-		"clean": "rimraf dist .turbo && rm -rf node_modules"
+		"clean": "rimraf dist .turbo"
 	},
 	"keywords": [],
 	"author": "Jack WebDev",
