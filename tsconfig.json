@@ -1,0 +1,3 @@
+{
+  "extends": "@sizela/config/tsconfig.base.json"
+}
