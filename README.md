@@ -42,22 +42,20 @@ sizela/
 - `pnpm run build:core`: Build the publishable `@sizela/core` package
 - `pnpm run check-types`: Check TypeScript types across all apps
 - `pnpm run check`: Run Biome formatting and linting
-- `pnpm run publish:core`: Publish `@sizela/core` from the workspace root
-- `pnpm run publish:jsr`: Publish `@sizela/core` to JSR using `jsr.json`
+- `pnpm run jsr:publish`: Publish all discovered JSR packages after syncing manifest versions
+- `pnpm run release:sync-jsr`: Sync workspace package versions into matching `jsr.json` files
 
 ## Publishing
 
-The repository root is a private monorepo package and cannot be published.
+The repository root is a private monorepo package and cannot be published directly.
 
-To publish the library package instead, run:
+For automated releases, GitHub Actions uses Changesets for npm publishing and trusted publishing for JSR.
 
-```bash
-pnpm run build:core
-pnpm run publish:core
-```
-
-To publish the same API to JSR, run:
+To publish JSR packages manually after syncing versions, run:
 
 ```bash
-pnpm run publish:jsr
+pnpm run jsr:publish
 ```
+
+For GitHub Actions publishing, JSR should be configured for trusted publishing from this repository.
+The workflow uses GitHub OIDC and does not require a `JSR_TOKEN`.
